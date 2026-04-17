@@ -1,442 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Claim Your $750 Target Gift Card</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Target Shopper Rewards Program $750</title>
+  <meta name="description" content="Complete a short survey to unlock your exclusive Target reward opportunity." />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;900&display=swap');
-
-    :root {
-      --red: #CC0000;
-      --red-glow: rgba(204,0,0,0.3);
-      --cream: #fdf8f8;
-      --shadow: 0 6px 28px rgba(0,0,0,0.11);
-    }
-
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Barlow', sans-serif;
-      background: var(--cream);
-      color: #111;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f5;
       min-height: 100vh;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── ANNOUNCEMENT BAR ── */
-    .bar {
-      background: var(--red);
-      color: #fff;
-      text-align: center;
-      padding: clamp(8px,2vw,11px) 16px;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(13px,3.5vw,17px);
-      letter-spacing: 2.5px;
-      animation: pulse-bar 3s ease-in-out infinite;
-    }
-    @keyframes pulse-bar {
-      0%,100% { background: var(--red); }
-      50%      { background: #e00000; }
-    }
-
-    /* ── LAYOUT ── */
-    .container {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 0 clamp(16px,5vw,28px) clamp(40px,10vw,70px);
-    }
-
-    /* ── LOGO ── */
-    .logo-wrap {
-      text-align: center;
-      padding: clamp(22px,6vw,36px) 0 clamp(8px,2vw,14px);
-    }
-    .logo-wrap img { width: clamp(100px,30vw,150px); height: auto; }
-
-    /* ── HERO ── */
-    .hero { text-align: center; padding: clamp(16px,4vw,28px) 0 0; }
-
-    .hero-tag {
-      display: inline-block;
-      background: var(--red);
-      color: #fff;
-      font-size: clamp(11px,3vw,13px);
-      font-weight: 700;
-      letter-spacing: 2px;
-      padding: 5px 16px;
-      border-radius: 50px;
-      margin-bottom: clamp(10px,3vw,16px);
-      text-transform: uppercase;
-      animation: fadeDown 0.6s ease both;
-    }
-
-    .hero h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(46px,13vw,68px);
-      line-height: 1.0;
-      color: #111;
-      letter-spacing: 1.5px;
-      animation: fadeDown 0.7s 0.1s ease both;
-    }
-    .hero h1 .amount {
-      color: var(--red);
-      display: block;
-      font-size: clamp(58px,17vw,86px);
-      line-height: 1;
-      text-shadow: 0 4px 22px var(--red-glow);
-    }
-    .hero-sub {
-      font-size: clamp(14px,4vw,17px);
-      color: #666;
-      font-weight: 600;
-      margin-top: clamp(6px,2vw,12px);
-      line-height: 1.5;
-      animation: fadeDown 0.7s 0.2s ease both;
-    }
-
-    /* ── CTA ── */
-    .cta-wrap {
-      text-align: center;
-      margin: clamp(22px,6vw,34px) 0 clamp(6px,2vw,10px);
-      animation: fadeUp 0.7s 0.3s ease both;
-    }
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg,var(--red) 0%,#e00000 100%);
-      color: #fff;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(22px,6vw,30px);
-      letter-spacing: 2px;
-      padding: clamp(13px,3.5vw,17px) clamp(36px,10vw,64px);
-      border-radius: 60px;
-      border: none;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow: 0 8px 24px var(--red-glow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      position: relative;
-      overflow: hidden;
-      max-width: 100%;
-    }
-    .btn::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.14), transparent);
-    }
-    .btn:hover  { transform: translateY(-3px) scale(1.03); box-shadow: 0 14px 34px var(--red-glow); }
-    .btn:active { transform: translateY(0) scale(0.98); }
-
-    .cta-note {
-      font-size: clamp(11px,3vw,13px);
-      color: #aaa;
-      margin-top: 8px;
-      font-weight: 600;
-    }
-
-    /* ── STATS ROW ── */
-    .stats-row {
-      display: flex;
-      gap: clamp(8px,2.5vw,12px);
-      margin: clamp(22px,6vw,32px) 0;
-      animation: fadeUp 0.7s 0.4s ease both;
-    }
-    .stat-card {
-      flex: 1;
-      background: #fff;
-      border-radius: 14px;
-      padding: clamp(12px,3.5vw,18px) clamp(6px,2vw,12px);
-      text-align: center;
-      box-shadow: var(--shadow);
-      border: 1px solid #eee;
-      min-width: 0;
-    }
-    .stat-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(22px,6.5vw,34px);
-      color: var(--red);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: clamp(9px,2.3vw,11px);
-      font-weight: 700;
-      color: #999;
-      letter-spacing: 0.3px;
-      margin-top: 4px;
-      text-transform: uppercase;
-    }
-
-
-
-    /* ── HOW IT WORKS ── */
-    .steps-section {
-      margin: 0 0 clamp(28px,7vw,40px);
-      animation: fadeUp 0.7s 0.5s ease both;
-    }
-    .section-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(20px,5.5vw,26px);
-      letter-spacing: 2px;
-      margin-bottom: clamp(12px,3vw,18px);
-    }
-    .steps { display: flex; flex-direction: column; gap: clamp(10px,2.5vw,13px); }
-    .step-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: clamp(14px,4vw,20px);
       display: flex;
       align-items: flex-start;
-      gap: clamp(12px,3vw,18px);
-      box-shadow: var(--shadow);
-      border: 1px solid #eee;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      justify-content: center;
+      padding: 20px 12px;
     }
-    .step-card:hover { transform: translateX(4px); box-shadow: 0 10px 32px rgba(0,0,0,0.1); }
-    .step-num {
-      width: clamp(38px,10vw,46px);
-      height: clamp(38px,10vw,46px);
-      min-width: clamp(38px,10vw,46px);
-      background: var(--red);
-      color: #fff;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(22px,6vw,28px);
-    }
-    .step-body h3 {
-      font-size: clamp(14px,4vw,17px);
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 3px;
-      line-height: 1.3;
-    }
-    .step-body p {
-      font-size: clamp(12px,3.5vw,14px);
-      color: #666;
-      line-height: 1.5;
-    }
-    .required {
-      display: inline-block;
-      background: #fff0f0;
-      color: var(--red);
-      font-size: clamp(10px,2.8vw,12px);
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 50px;
-      margin-top: 5px;
-    }
-
-    /* ── FAQ ── */
-    .faq-section {
-      margin: 0 0 clamp(28px,7vw,40px);
-      animation: fadeUp 0.7s 0.55s ease both;
-    }
-    .faq-item {
+    .card {
       background: #fff;
-      border-radius: 14px;
-      margin-bottom: 9px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid #eee;
-    }
-    .faq-question {
+      border-radius: 18px;
       width: 100%;
-      padding: clamp(14px,4vw,18px) clamp(14px,4vw,20px);
-      background: none;
+      max-width: 360px;
+      margin: 0 auto;
+      padding: 28px 22px 22px;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+    .online-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 50px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: #333;
+      font-weight: 500;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .online-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+    }
+    .logo { margin-bottom: 18px; }
+    .logo svg { width: 56px; height: 56px; }
+    .exclusive-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #fff0f0;
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 13px;
+      color: #cc0000;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #cc0000;
+      display: inline-block;
+    }
+    .headline {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1a1a1a;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+    .headline .highlight { color: #cc0000; }
+    .sub {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .fine {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: #cc0000;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
       border: none;
-      text-align: left;
+      border-radius: 50px;
+      padding: 16px 0;
       cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      transition: background 0.15s;
+    }
+    .cta-btn:hover { background: #b00000; }
+    .footer {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid #f0f0f0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 10px;
-      transition: background 0.2s;
     }
-    .faq-question:hover { background: #fdf5f5; }
-    .faq-question h3 {
-      font-size: clamp(13px,4vw,16px);
-      font-weight: 700;
-      color: #111;
-      margin: 0;
-      flex: 1;
-      line-height: 1.3;
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #333;
+      font-weight: 500;
     }
-    .faq-icon {
-      width: clamp(17px,4.5vw,20px);
-      height: clamp(17px,4.5vw,20px);
-      fill: #999;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: #16a34a;
+      font-weight: 600;
     }
-    .faq-item.active .faq-icon { transform: rotate(180deg); fill: var(--red); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-    .faq-item.active .faq-answer { max-height: 400px; }
-    .faq-answer p {
-      padding: 0 clamp(14px,4vw,20px) clamp(14px,4vw,18px);
-      color: #555;
-      font-size: clamp(12px,3.5vw,14.5px);
-      line-height: 1.65;
-    }
-
-    /* ── WARNING ── */
-    .warning {
-      background: linear-gradient(135deg,#fff8e1,#fffbeb);
-      border: 1.5px solid #fcd34d;
-      color: #92400e;
-      padding: clamp(14px,4vw,18px) clamp(14px,4vw,20px);
-      border-radius: 14px;
-      font-size: clamp(12px,3.3vw,13.5px);
-      font-weight: 700;
+    .copyright {
+      font-size: 11px;
+      color: #aaa;
+      margin-top: 8px;
       text-align: center;
-      line-height: 1.6;
     }
-    .warn-icon { font-size: clamp(16px,4vw,20px); display: block; margin-bottom: 6px; }
-
-    /* ── KEYFRAMES ── */
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-
+    .icon { width: 15px; height: 15px; }
   </style>
 </head>
 <body>
-
-  <!-- ANNOUNCEMENT BAR -->
-  <div class="bar">🎯 LIMITED TIME OFFER — CLAIM YOUR REWARD TODAY</div>
-
-  <div class="container">
-
-    <!-- LOGO -->
-    <div class="logo-wrap">
-      <img src="logo.png" alt="Target">
+  <div class="card">
+    <div class="online-pill">
+      <span class="online-dot"></span> 1,397 online now
     </div>
 
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-tag">🎁 Exclusive Reward Program</div>
-      <h1>Claim Your<span class="amount">$750</span>Gift Card</h1>
-      <p class="hero-sub">Complete a few simple steps and unlock your reward instantly.</p>
+    <div class="logo">
+      <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="28" cy="28" r="28" fill="#CC0000"/>
+        <circle cx="28" cy="28" r="16" fill="#fff"/>
+        <circle cx="28" cy="28" r="8" fill="#CC0000"/>
+      </svg>
     </div>
 
-    <!-- CTA -->
-    <div class="cta-wrap">
-      <a href="https://giftclick.org/aff_c?offer_id=1178&aff_id=3471" target="_blank" rel="noopener noreferrer" class="btn">
-        START EARNING NOW →
-      </a>
-      <p class="cta-note">Free to join · Takes less than 5 minutes</p>
+    <div class="exclusive-badge">
+      <span class="badge-dot"></span> Exclusive Offer
     </div>
 
-    <!-- STATS -->
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-num" id="claimedStat">3,847</div>
-        <div class="stat-label">Claimed Today</div>
+    <div class="headline">
+      Get a <span class="highlight">$750</span> Target Student Discount Today
+    </div>
+
+    <div class="sub">Complete a short survey to unlock your exclusive reward.</div>
+
+    <div class="fine">
+      Limited availability. Selected users may qualify for this special $750 Target Student Discount opportunity.
+    </div>
+
+    <a href="https://giftclick.org/aff_c?offer_id=1177&aff_id=3471" class="cta-btn">
+      Get Started &rarr;
+    </a>
+
+    <div class="footer">
+      <div class="footer-left">
+        <svg class="icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="7.5" cy="7.5" r="7" fill="#CC0000"/>
+          <circle cx="7.5" cy="7.5" r="4.5" fill="#fff"/>
+          <circle cx="7.5" cy="7.5" r="2.2" fill="#CC0000"/>
+        </svg>
+        Your One-Stop Shop.
       </div>
-      <div class="stat-card">
-        <div class="stat-num" id="pendingStat">142</div>
-        <div class="stat-label">Pending Now</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">$750</div>
-        <div class="stat-label">Max Reward</div>
-      </div>
-    </div>
-
-
-
-    <!-- HOW IT WORKS -->
-    <div class="steps-section">
-      <div class="section-title">HOW IT WORKS</div>
-      <div class="steps">
-        <div class="step-card">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <h3>Answer a Few Questions</h3>
-            <p>Click "Start Earning Now" and answer quick basic questions to get started.</p>
-          </div>
-        </div>
-        <div class="step-card">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <h3>Complete 4–5 Deals</h3>
-            <p>Provide a valid email address and complete the required deals to qualify.</p>
-            <span class="required">⚡ Required to receive reward</span>
-          </div>
-        </div>
-        <div class="step-card">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <h3>Receive Your Gift Card</h3>
-            <p>Once verified, your $750 Target gift card will be sent directly to your inbox.</p>
-          </div>
-        </div>
+      <div class="footer-right">
+        <svg class="icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="7.5" cy="7.5" r="7" fill="#16a34a"/>
+          <path d="M4.5 7.5l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Verified Offer
       </div>
     </div>
 
-    <!-- FAQ -->
-    <div class="faq-section">
-      <div class="section-title">FREQUENTLY ASKED QUESTIONS</div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <h3>What are Deals?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>Deals are simple tasks — downloading an app, completing a survey, or signing up for a trial. Each deal has specific steps; once you complete them, you earn your reward.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <h3>How many Deals do I need?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>You need to complete 4–5 deals to unlock your full $750 gift card. Make sure you finish all required deals from start to finish.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <h3>What countries is this available in?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-        </button>
-        <div class="faq-answer">
-          <p>This offer is available in the United States, Canada, Australia, and the United Kingdom.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- WARNING -->
-    <div class="warning">
-      <span class="warn-icon">⚠️</span>
-      Completing all required deals is mandatory to qualify for your gift card. Incomplete submissions will not be rewarded.
-    </div>
-
+    <div class="copyright">&copy; Target Rewards, Inc. 2025</div>
   </div>
-
-
-
-  <script>
-    /* ── FAQ ── */
-    function toggleFaq(btn) {
-      const item = btn.parentElement;
-      const was = item.classList.contains('active');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-      if (!was) item.classList.add('active');
-    }
-  </script>
-
 </body>
 </html>
